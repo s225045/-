@@ -2,7 +2,7 @@ import streamlit as st
 from datetime import date
 
 # 페이지 설정
-st.set_page_config(page_title="나의 디데이 계산기", page_icon="📅")
+st.set_page_config(page_title="디데이 계산기", page_icon="📅")
 
 st.title("📅 D-Day 계산기")
 st.write("중요한 일정을 설정하고 남은 기간을 확인하세요!")
@@ -29,4 +29,5 @@ else:
     st.secondary(f"선택한 날짜: {target_date}")
 
 # 프로그래스 바 (선택 사항: 올해 기준 시각화)
+
 st.progress(min(max(days_left / 365, 0.0), 1.0))
